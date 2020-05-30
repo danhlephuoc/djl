@@ -56,7 +56,9 @@ public final class ObjectDetection {
                 Criteria.builder()
                         .optApplication(Application.CV.OBJECT_DETECTION)
                         .setTypes(Image.class, DetectedObjects.class)
-                        .optFilter("backbone", "resnet50")
+                        .optFilter("backbone", "darknet53")
+                        .optFilter("dataset", "coco"
+                        		+ "")
                         .optProgress(new ProgressBar())
                         .build();
 
